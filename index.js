@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
+const PORT = process.env.PORT || 3001;
+
 const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -37,6 +39,6 @@ io.on("connection", (socket) => {
   console.log("socket id: ", socket.id);
 });
 
-server.listen(3001, () => {
+server.listen(PORT, () => {
   console.log("server is running");
 });
