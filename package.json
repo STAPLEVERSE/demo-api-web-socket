@@ -13,7 +13,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "deploy": "git push heroku main",
+    "logs": "git push heroku main"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

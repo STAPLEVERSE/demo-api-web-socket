@@ -6,8 +6,6 @@ function SocketRouter(io) {
   router.post("/pfp-outfit", (req, res) => {
     const body = req.body;
 
-    console.log(req);
-
     console.log({ body });
 
     io.emit("pfp-outfit", JSON.stringify(body));
