@@ -28,14 +28,13 @@ app.set(express.urlencoded({ extended: false }));
 
 app.set(express.json());
 
-// landing
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/", (_, res) => {
+  res.send("hello world");
 });
 
 // socket connection
 io.on("connection", (socket) => {
-  console.log(socket.id);
+  console.log("socket id: ", socket.id);
 });
 
 server.listen(3001, () => {
